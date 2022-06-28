@@ -335,8 +335,8 @@ footer.row {
 }
 /* Profile Pic */
 .profile {
-  max-width: 250px;
-  padding: 15px 0px 0 0;
+  max-width: 180px;
+  padding: 0 15px 0 0;
 }
 /* Glyphicons */
 .glyphicon-heart {
