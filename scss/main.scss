@@ -1,0 +1,214 @@
+// Variables
+$primary-color: #2c3e50;
+$secondary-color: #3498db;
+$accent-color: #e74c3c;
+$text-color: #333;
+$light-bg: #f8f9fa;
+$dark-bg: #343a40;
+
+// Mixins
+@mixin transition($property: all, $duration: 0.3s) {
+  transition: $property $duration ease-in-out;
+}
+
+@mixin card-shadow {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+// Base styles
+:root {
+  --primary-color: #{$primary-color};
+  --secondary-color: #{$secondary-color};
+  --accent-color: #{$accent-color};
+  --text-color: #{$text-color};
+  --light-bg: #{$light-bg};
+  --dark-bg: #{$dark-bg};
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
+// Navigation
+.navbar {
+  @include transition(background-color);
+  padding: 1rem 0;
+  
+  &.scrolled {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+}
+
+// Header
+.header {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  
+  #particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  
+  .content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding-top: 20vh;
+  }
+}
+
+// About section
+.about {
+  padding: 6rem 0;
+  
+  .profile-img {
+    border-radius: 50%;
+    @include card-shadow;
+  }
+  
+  .skills {
+    .skill-item {
+      margin: 1rem 0;
+      
+      .skill-bar {
+        height: 10px;
+        border-radius: 5px;
+        background: var(--light-bg);
+        overflow: hidden;
+        
+        .progress {
+          @include transition(width);
+          background: var(--secondary-color);
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+// Portfolio
+.portfolio {
+  background: var(--light-bg);
+  padding: 6rem 0;
+  
+  .filter-buttons {
+    margin-bottom: 2rem;
+    
+    .btn {
+      margin: 0.5rem;
+      @include transition;
+      
+      &.active {
+        background: var(--secondary-color);
+        color: white;
+      }
+    }
+  }
+  
+  .project-card {
+    @include card-shadow;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    
+    .project-img {
+      position: relative;
+      overflow: hidden;
+      
+      img {
+        @include transition(transform);
+      }
+      
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        opacity: 0;
+        @include transition(opacity);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      &:hover {
+        img {
+          transform: scale(1.1);
+        }
+        
+        .overlay {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+// Contact
+.contact {
+  padding: 6rem 0;
+  
+  .form-control {
+    border: none;
+    border-bottom: 2px solid var(--light-bg);
+    border-radius: 0;
+    padding: 1rem 0;
+    @include transition;
+    
+    &:focus {
+      box-shadow: none;
+      border-color: var(--secondary-color);
+    }
+  }
+}
+
+// Footer
+.footer {
+  background: var(--dark-bg);
+  color: white;
+  padding: 4rem 0;
+  
+  .social-links {
+    a {
+      color: white;
+      margin: 0 1rem;
+      font-size: 1.5rem;
+      @include transition;
+      
+      &:hover {
+        color: var(--secondary-color);
+      }
+    }
+  }
+}
+
+// Animations
+[data-aos] {
+  opacity: 0;
+  @include transition;
+  
+  &.aos-animate {
+    opacity: 1;
+  }
+}
+
+// Dark mode
+.dark-mode {
+  --text-color: #fff;
+  --light-bg: #{$dark-bg};
+  --dark-bg: #{$light-bg};
+  
+  body {
+    background: var(--dark-bg);
+  }
+}
