@@ -1,61 +1,44 @@
 const projectsData = [
   {
-    "title": "Web Portal for Networking Provider Company (USA)",
-    "role": "Technical Project Manager",
-    "organization": "Merik Solutions",
-    "technologies": ["Stylus", "Pug", "Core PHP"],
+    "title": "3-Tier Performance Management System for Managers",
+    "role": "Appian Developer",
+    "organization": "Allure Digital",
+    "technologies": ["Appian", "MySql","Data Analytics", "UI/UX", "Process Model Design"],
     "key_features": [
-      "Region-based restrictions and package offerings",
-      "Online payment integration",
-      "Portal control for enabling/disabling services",
-      "Packages for smart devices (TV, cameras, AC, fans, doors, etc.)"
+      "Enable managers to design and deploy tailored performance evaluation surveys with dynamic question types.It Incorporates real-time peer reviews for each survey question,comes with an interactive dashboard to visualize performance metrics, trends, and actionable insights."
     ],
     "responsibilities": [
-      "Oversaw a specific part of the portal",
-      "Managed the team, created tasks, and ensured development, testing, and deployment",
-      "Handled payment and receipt submission processes"
+      "Designed and configured Appian interfaces, process models, and record types to automate survey workflows and feedback collection.",
+      "Integrated peer review functionality using Appian’s SAIL forms and expression rules, ensuring real-time updates and data validation.",
+      "Built the analytics dashboard with Appian’s reporting tools, leveraging data from MySQL databases for dynamic visualizations.",
+      "Conducted end-to-end testing and debugging to ensure seamless user experiences across HR teams and employees."
     ]
   },
-  {
-    "title": "Banking System for Employee Loans (Canada)",
-    "role": "Scrum Master",
-    "organization": "Merik Solutions",
-    "technologies": ["Vue.js", "Python", "Django", "Flutter"],
-    "key_features": [
-      "Monthly loan offerings for employed individuals",
-      "Integration with PayPal",
-      "Auto-notifications for loan limits and recovery timelines"
-    ],
-    "responsibilities": [
-      "Assisted the Product Manager in app development",
-      "Facilitated Agile ceremonies",
-      "Ensured timely delivery of features and bug fixes"
-    ]
-  },
+  
   {
     "title": "Human Resource Management System",
-    "role": "Appian Analyst | Product Scrum Master",
+    "role": "Appian Developer",
     "organization": "Allure Digital",
-    "technologies": ["Java", "Appian"],
+    "technologies": ["Appian","Database Design", "UI/UX", "Process Model Design"],
     "key_features": [
       "Employee Management",
-      "Payroll Management (overtime, dynamic tax, deductions, salary slips)",
+      "Payroll Management",
       "Attendance & Leave Management",
-      "Document Management",
       "Task Management",
-      "Employee Letters"
+      "Performance Management"
     ],
     "responsibilities": [
-      "Gathered requirements and translated them into technical specifications",
-      "Facilitated Scrum ceremonies",
-      "Collaborated with stakeholders to deliver a working HRM solution"
+
+      "Built Attendance Device Data Pipeline – Integrated biometric attendance devices with Appian, developing a data ingestion pipeline that processes and maps employee attendance logs to HR modules for accurate payroll calculations.",
+      "Optimized Process Workflows – Created workflow automations for employee onboarding, leave management, and payroll approval.",
+      "Agile Project Execution – Actively participated in Scrum and Kanban workflows, ensuring timely sprints and efficient task management in the project lifecycle."
     ]
   },
   {
-    "title": "InvesDocs – Email Management Solution",
-    "role": "Appian Analyst | Product Scrum Master",
+    "title": "InvesDocs – Email workflow Management",
+    "role": "Appian Developer",
     "organization": "Allure Digital",
-    "technologies": ["Java", "Appian"],
+    "technologies": ["Appian","Database Design", "UI/UX", "Process Model Design"],
     "key_features": [
       "Email Integration (Outlook, Gmail)",
       "Email Fetching & Rules",
@@ -64,12 +47,30 @@ const projectsData = [
       "Email System Features (send, receive, spam filtering, custom folders, categorizations)"
     ],
     "responsibilities": [
-      "Designed and implemented email management workflows",
-      "Ensured seamless integration with Outlook and Gmail",
-      "Provided technical guidance to the development team",
-      "Conducted testing and ensured the system met client requirements"
+      "Contributed to the development of a workflow automation system in Appian, streamlining operations across multiple departments and eliminating manual processes.",
+      "Implemented a real-time email retrieval architecture using webhooks, ensuring seamless integration with Gmail and Outlook APIs for automated email processing and workflow triggers.",
+      "Leveraged REST APIs to connect Appian with email services, automating inbound and outbound email workflows for improved communication efficiency.",
     ]
-  }
+  },
+  {
+    "title": "Azure GPT Email Labelling Automation",
+    "role": "Backend Developer",
+    "organization": "Allure Digital",
+    "technologies": ["Azure GPT", "Python", "REST APIs", "Azure Functions"],
+    "key_features": [
+        "Content-based email analysis using Azure GPT",
+        "Automatic categorization and labelling of emails",
+        "Reduces manual effort and ensures accurate email sorting"
+    ],
+    "responsibilities": [
+        "Developed a backend automation trigger for real-time email classification",
+        "Integrated Azure GPT to analyze and label incoming emails based on content",
+        "Designed and implemented a robust email sorting mechanism to improve workflow efficiency",
+        "Ensured seamless integration with enterprise email systems",
+        "Optimized system performance to handle high email traffic efficiently"
+    ]
+}
+
 ];
 
 function createProjectTabs() {

@@ -7,10 +7,8 @@ AOS.init({
 // Initialize Typed.js
 const typed = new Typed('#typed-text', {
     strings: [
-        'Technical Project Manager',
+        'Associate Appian Developer',
         'Software Developer',
-        'Business Analyst',
-        'AI Enthusiast'
     ],
     typeSpeed: 50,
     backSpeed: 30,

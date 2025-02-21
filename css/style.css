@@ -462,8 +462,8 @@ section h2 {
     padding: 2rem;
     border-radius: 20px;
     position: relative;
-    width: 90%;
-    max-width: 400px;
+    width: 100%;
+    max-width: 1400px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     transform: translateY(20px);
     transition: transform 0.3s ease;
@@ -721,6 +721,29 @@ header .subtitle {
     color: #ffffff;
     transition: all 0.3s ease;
     border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+}
+
+.social-icon[data-tooltip]:before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 12px;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.social-icon[data-tooltip]:hover:before {
+    opacity: 1;
+    visibility: visible;
 }
 
 .social-icon:hover {
